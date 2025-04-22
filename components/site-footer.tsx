@@ -9,11 +9,11 @@ interface SiteFooterProps {
 
 export function SiteFooter({ className }: SiteFooterProps) {
   return (
-    <footer className={cn("w-full border-t bg-background", className)}>
+    <footer className={cn("bg-background w-full border-t", className)}>
       <div className="container mx-auto grid gap-8 px-4 py-10 md:grid-cols-2 lg:grid-cols-4">
         <div className="space-y-4">
           <h3 className="text-lg font-medium">Jornal Olimpico</h3>
-          <p className="text-sm text-muted-foreground">
+          <p className="text-muted-foreground text-sm">
             Seu portal de notícias e recursos para olimpíadas científicas
             brasileiras.
           </p>
@@ -195,11 +195,11 @@ export function SiteFooter({ className }: SiteFooterProps) {
       </div>
       <div className="border-t py-6">
         <div className="container mx-auto flex flex-col items-center justify-between gap-4 px-4 md:flex-row">
-          <p className="text-center text-sm text-muted-foreground md:text-left">
+          <p className="text-muted-foreground text-center text-sm md:text-left">
             &copy; {new Date().getFullYear()} Jornal Olimpico. Todos os direitos
             reservados.
           </p>
-          <p className="text-center text-sm text-muted-foreground md:text-right">
+          <p className="text-muted-foreground text-center text-sm md:text-right">
             Desenvolvido com ❤️ para a comunidade olímpica brasileira
           </p>
         </div>

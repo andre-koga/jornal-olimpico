@@ -10,13 +10,14 @@ import {
   Home,
   Info,
   Mail,
-  MoonStar,
+  Medal,
   Users,
 } from "lucide-react";
 
 import {
   Sidebar,
   SidebarContent,
+  SidebarFooter,
   SidebarGroup,
   SidebarGroupContent,
   SidebarGroupLabel,
@@ -31,15 +32,15 @@ export function SiteSidebar() {
     <Sidebar
       variant="sidebar"
       collapsible="icon"
-      className="z-20 border-r border-border"
+      className="border-border z-20 border-r"
     >
       <SidebarHeader>
         <SidebarMenu>
           <SidebarMenuItem className="my-2">
             <SidebarMenuButton asChild>
               <Link href="/">
-                <MoonStar className="w-4 h-4 text-primary" />
-                <span className="text-lg text-primary font-semibold">
+                <Medal className="h-4 w-4 text-amber-400" />
+                <span className="text-primary text-lg font-semibold">
                   Jornal Olimpico
                 </span>
               </Link>

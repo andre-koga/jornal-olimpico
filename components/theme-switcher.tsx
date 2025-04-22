@@ -19,8 +19,8 @@ export function ThemeSwitcher() {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="outline" size="icon">
-          <Sun className="h-4 w-4 dark:opacity-0 opacity-100" />
-          <Moon className="absolute h-4 w-4 dark:opacity-100 opacity-0" />
+          <Sun className="h-4 w-4 opacity-100 dark:opacity-0" />
+          <Moon className="absolute h-4 w-4 opacity-0 dark:opacity-100" />
           <span className="sr-only">Alternar tema</span>
         </Button>
       </DropdownMenuTrigger>

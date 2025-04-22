@@ -6,16 +6,17 @@ import { SiteLayout } from "@/components/site-layout";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { ArticleSidebar } from "@/components/article-sidebar";
+import { Medal } from "lucide-react";
 
 export default function HomePage() {
   return (
     <SiteLayout>
-      <div className="mx-auto max-w-[95ch] container px-4 py-6 md:py-10 grid grid-cols-1 md:grid-cols-[65ch_30ch] gap-6">
+      <div className="container mx-auto grid max-w-[95ch] grid-cols-1 gap-6 px-4 py-6 md:grid-cols-[65ch_30ch] md:py-10">
         <PageHeader
           title="Jornal Olimpico"
           description="Seu portal de notícias e recursos para olimpíadas científicas brasileiras"
         />
-        <div className="order-2 space-y-6 max-w-prose">
+        <div className="order-2 max-w-prose space-y-6">
           <div className="flex items-center justify-between">
             <h2 className="text-2xl font-bold tracking-tight">
               Artigos Recentes

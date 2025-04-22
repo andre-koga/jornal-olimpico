@@ -28,7 +28,7 @@ export function ArticleSidebar() {
   const [selectedYear, setSelectedYear] = useState<string | null>(null);
 
   return (
-    <div className="w-full mb-8 sm:mb-0 sm:sticky top-20 self-start order-1 md:order-last">
+    <div className="top-20 order-1 mb-8 w-full self-start sm:sticky sm:mb-0 md:order-last">
       <Card className="p-4">
         <div className="space-y-4">
           <h3 className="font-medium">Filtrar Artigos</h3>
@@ -36,7 +36,7 @@ export function ArticleSidebar() {
 
           <div className="space-y-4">
             <div className="relative">
-              <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
+              <Search className="text-muted-foreground absolute top-2.5 left-2.5 h-4 w-4" />
               <Input
                 type="search"
                 placeholder="Pesquisar artigos..."
@@ -182,7 +182,7 @@ export function ArticleSidebar() {
                   <Button
                     variant="ghost"
                     size="sm"
-                    className="w-full mt-2"
+                    className="mt-2 w-full"
                     onClick={() => {
                       setSelectedCategory(null);
                       setSelectedOlympiad(null);
