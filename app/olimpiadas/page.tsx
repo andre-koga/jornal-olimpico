@@ -1,5 +1,5 @@
-import { OlimpiadasSidebar } from "@/components/olimpiadas-sidebar";
 import { PageHeader } from "@/components/page-header";
+import { PageSideMenu } from "@/components/page-sidemenu";
 import { SiteLayout } from "@/components/site-layout";
 import { Card, CardHeader, CardTitle } from "@/components/ui/card";
 
@@ -18,7 +18,12 @@ export default function OlimpiadasPage() {
             </CardHeader>
           </Card>
         </div>
-        <OlimpiadasSidebar />
+        <PageSideMenu
+          title="Olimpíadas"
+          description="Enciclopédia de olimpíadas brasileiras"
+        >
+          yo
+        </PageSideMenu>
       </div>
     </SiteLayout>
   );

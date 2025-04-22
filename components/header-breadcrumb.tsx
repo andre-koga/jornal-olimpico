@@ -40,9 +40,9 @@ export function HeaderBreadcrumb() {
           {isLast ? (
             <BreadcrumbPage>{formattedSegment}</BreadcrumbPage>
           ) : (
-            <Link href={href} passHref legacyBehavior>
-              <BreadcrumbLink>{formattedSegment}</BreadcrumbLink>
-            </Link>
+            <BreadcrumbLink asChild>
+              <Link href={href}>{formattedSegment}</Link>
+            </BreadcrumbLink>
           )}
         </BreadcrumbItem>
         {!isLast && (
@@ -58,9 +58,9 @@ export function HeaderBreadcrumb() {
     <Breadcrumb>
       <BreadcrumbList>
         <BreadcrumbItem>
-          <Link href="/" passHref legacyBehavior>
-            <BreadcrumbLink>Home</BreadcrumbLink>
-          </Link>
+          <BreadcrumbLink asChild>
+            <Link href="/">Página Inicial</Link>
+          </BreadcrumbLink>
         </BreadcrumbItem>
         {pathSegments.length > 0 && (
           <BreadcrumbSeparator>
