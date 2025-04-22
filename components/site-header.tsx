@@ -6,14 +6,6 @@ import { Button } from "@/components/ui/button";
 import { SidebarTrigger } from "@/components/ui/sidebar";
 import { ThemeSwitcher } from "@/components/theme-switcher";
 import { HeaderBreadcrumb } from "@/components/header-breadcrumb";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
 
 export function SiteHeader() {
   return (
@@ -24,7 +16,7 @@ export function SiteHeader() {
           <span className="sr-only">Toggle Sidebar</span>
         </SidebarTrigger>
       </div>
-      <div className="container mx-auto flex h-16 items-center px-0 sm:px-4">
+      <div className="container mx-auto flex h-16 items-center px-0 sm:px-6">
         <HeaderBreadcrumb />
         <div className="flex flex-1 items-center justify-end space-x-4">
           <nav className="hidden md:flex items-center space-x-2">

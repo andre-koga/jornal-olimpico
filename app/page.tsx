@@ -1,24 +1,21 @@
 import { Suspense } from "react";
 
 import { ArticleCard } from "@/components/article-card";
-import { ArticleToolbar } from "@/components/article-toolbar";
 import { PageHeader } from "@/components/page-header";
 import { SiteLayout } from "@/components/site-layout";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
+import { ArticleSidebar } from "@/components/article-sidebar";
 
 export default function HomePage() {
   return (
     <SiteLayout>
-      <div className="mx-auto max-w-prose container px-4 py-6 md:py-10">
+      <div className="mx-auto max-w-[95ch] container px-4 py-6 md:py-10 grid grid-cols-1 md:grid-cols-[65ch_30ch] gap-6">
         <PageHeader
           title="Jornal Olimpico"
           description="Seu portal de notícias e recursos para olimpíadas científicas brasileiras"
         />
-
-        <ArticleToolbar />
-
-        <div className="space-y-6">
+        <div className="order-2 space-y-6 max-w-prose">
           <div className="flex items-center justify-between">
             <h2 className="text-2xl font-bold tracking-tight">
               Artigos Recentes
@@ -35,6 +32,7 @@ export default function HomePage() {
             <Button variant="outline">Carregar mais artigos</Button>
           </div>
         </div>
+        <ArticleSidebar />
       </div>
     </SiteLayout>
   );
