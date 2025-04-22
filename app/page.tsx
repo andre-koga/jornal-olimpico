@@ -6,7 +6,6 @@ import { SiteLayout } from "@/components/site-layout";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { ArticleSidebar } from "@/components/article-sidebar";
-import { Medal } from "lucide-react";
 
 export default function HomePage() {
   return (
@@ -14,6 +13,7 @@ export default function HomePage() {
       <div className="container mx-auto grid max-w-[95ch] grid-cols-1 gap-6 px-4 py-6 md:grid-cols-[65ch_30ch] md:py-10">
         <PageHeader
           title="Jornal Olimpico"
+          image="/images/banner.webp"
           description="Seu portal de notícias e recursos para olimpíadas científicas brasileiras"
         />
         <div className="order-2 max-w-prose space-y-6">
