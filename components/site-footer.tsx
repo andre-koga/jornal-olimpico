@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-
 import { Button } from "@/components/ui/button";
+import { footerNavigation } from "@/config/navigation";
 
 interface SiteFooterProps {
   className?: string;
@@ -95,101 +95,37 @@ export function SiteFooter({ className }: SiteFooterProps) {
         <div className="space-y-4">
           <h3 className="text-lg font-medium">Olimpíadas</h3>
           <ul className="space-y-2 text-sm">
-            <li>
-              <Link href="/olimpiadas/matematica" className="hover:underline">
-                Olimpíada Brasileira de Matemática
-              </Link>
-            </li>
-            <li>
-              <Link href="/olimpiadas/fisica" className="hover:underline">
-                Olimpíada Brasileira de Física
-              </Link>
-            </li>
-            <li>
-              <Link href="/olimpiadas/quimica" className="hover:underline">
-                Olimpíada Brasileira de Química
-              </Link>
-            </li>
-            <li>
-              <Link href="/olimpiadas/informatica" className="hover:underline">
-                Olimpíada Brasileira de Informática
-              </Link>
-            </li>
-            <li>
-              <Link href="/olimpiadas/astronomia" className="hover:underline">
-                Olimpíada Brasileira de Astronomia
-              </Link>
-            </li>
-            <li>
-              <Link href="/olimpiadas" className="hover:underline">
-                Ver todas
-              </Link>
-            </li>
+            {footerNavigation.olimpiadas.map((item) => (
+              <li key={item.href}>
+                <Link href={item.href} className="hover:underline">
+                  {item.title}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
         <div className="space-y-4">
           <h3 className="text-lg font-medium">Recursos</h3>
           <ul className="space-y-2 text-sm">
-            <li>
-              <Link href="/materiais-estudo" className="hover:underline">
-                Materiais de Estudo
-              </Link>
-            </li>
-            <li>
-              <Link href="/provas-anteriores" className="hover:underline">
-                Provas Anteriores
-              </Link>
-            </li>
-            <li>
-              <Link href="/grupos-estudo" className="hover:underline">
-                Grupos de Estudo
-              </Link>
-            </li>
-            <li>
-              <Link href="/mentoria" className="hover:underline">
-                Programa de Mentoria
-              </Link>
-            </li>
-            <li>
-              <Link href="/calendario" className="hover:underline">
-                Calendário de Eventos
-              </Link>
-            </li>
+            {footerNavigation.recursos.map((item) => (
+              <li key={item.href}>
+                <Link href={item.href} className="hover:underline">
+                  {item.title}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
         <div className="space-y-4">
           <h3 className="text-lg font-medium">Institucional</h3>
           <ul className="space-y-2 text-sm">
-            <li>
-              <Link href="/quem-somos" className="hover:underline">
-                Quem Somos
-              </Link>
-            </li>
-            <li>
-              <Link href="/sobre" className="hover:underline">
-                Sobre o Projeto
-              </Link>
-            </li>
-            <li>
-              <Link href="/contato" className="hover:underline">
-                Contato
-              </Link>
-            </li>
-            <li>
-              <Link href="/doar" className="hover:underline">
-                Apoiar o Projeto
-              </Link>
-            </li>
-            <li>
-              <Link href="/politica-privacidade" className="hover:underline">
-                Política de Privacidade
-              </Link>
-            </li>
-            <li>
-              <Link href="/termos-uso" className="hover:underline">
-                Termos de Uso
-              </Link>
-            </li>
+            {footerNavigation.institucional.map((item) => (
+              <li key={item.href}>
+                <Link href={item.href} className="hover:underline">
+                  {item.title}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
       </div>

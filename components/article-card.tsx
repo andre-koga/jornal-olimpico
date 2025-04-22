@@ -38,7 +38,7 @@ export function ArticleCard({ article }: ArticleCardProps) {
             className="object-cover"
           />
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col space-y-1">
           <CardHeader>
             <div className="mb-2 flex flex-wrap gap-2">
               <Badge variant="outline">{article.category}</Badge>

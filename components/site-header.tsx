@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { SidebarTrigger } from "@/components/ui/sidebar";
 import { ThemeSwitcher } from "@/components/theme-switcher";
 import { HeaderBreadcrumb } from "@/components/header-breadcrumb";
+import { headerNavigation } from "@/config/navigation";
 
 export function SiteHeader() {
   return (
@@ -20,36 +21,15 @@ export function SiteHeader() {
         <HeaderBreadcrumb />
         <div className="flex flex-1 items-center justify-end space-x-4">
           <nav className="hidden items-center space-x-2 md:flex">
-            <Link
-              href="/olimpiadas"
-              className="text-sm font-medium underline-offset-4 hover:underline"
-            >
-              Olimpíadas
-            </Link>
-            <Link
-              href="/materias"
-              className="text-sm font-medium underline-offset-4 hover:underline"
-            >
-              Matérias
-            </Link>
-            <Link
-              href="/recursos"
-              className="text-sm font-medium underline-offset-4 hover:underline"
-            >
-              Recursos
-            </Link>
-            <Link
-              href="/sobre"
-              className="text-sm font-medium underline-offset-4 hover:underline"
-            >
-              Sobre
-            </Link>
-            <Link
-              href="/contato"
-              className="text-sm font-medium underline-offset-4 hover:underline"
-            >
-              Contato
-            </Link>
+            {headerNavigation.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="text-sm font-medium underline-offset-4 hover:underline"
+              >
+                {item.title}
+              </Link>
+            ))}
           </nav>
           <ThemeSwitcher />
           <Button variant="default" size="sm" className="hidden md:flex">
